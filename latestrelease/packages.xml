@@ -1,6 +1,6 @@
 
 					<packages>
-						<package name="LocalProcessModelDiscovery" version="6.14.3" os="all" url="LocalProcessModelDiscovery/LocalProcessModelDiscovery-6.14.3-all.zip" desc="LocalProcessModelDiscovery" org="Eindhoven University of Technology" license="GPL" author="Niek Tax" auto="false" hasPlugins="true" logo="prom_subtitle_hat_300.png">
+						<package name="LocalProcessModelDiscovery" version="6.14.4" os="all" url="LocalProcessModelDiscovery/LocalProcessModelDiscovery-6.14.4-all.zip" desc="LocalProcessModelDiscovery" org="Eindhoven University of Technology" license="GPL" author="Niek Tax" auto="false" hasPlugins="true" logo="prom_subtitle_hat_300.png">
 				        <dependency org="prom" name="ProM-Plugins" rev="latest" changing="true" transitive="true" />
         <dependency org="prom" name="AcceptingPetriNetClassicalReductor" rev="latest" changing="true" transitive="true" />
 		<dependency org="prom" name="EvolutionaryTreeMiner" rev="latest" changing="true" transitive="true" />  

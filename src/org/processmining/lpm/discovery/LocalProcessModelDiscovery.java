@@ -35,13 +35,6 @@ import org.processmining.lpm.util.LocalProcessModelTopSet;
 import org.processmining.processtree.ProcessTree;
 import org.processmining.processtree.impl.ProcessTreeImpl;
 
-@Plugin(
-		name = "Search for Local Process Models", 
-		parameterLabels = {"Input Log"}, 
-	    returnLabels = {"Local Process Model Ranking"}, 
-	    returnTypes = { LPMXLog.class },
-	    level = PluginLevel.PeerReviewed
-		)
 public class LocalProcessModelDiscovery {
 	private LocalProcessModelTopSet topSet;
 
@@ -53,35 +46,7 @@ public class LocalProcessModelDiscovery {
 	
 	private Map<String, Integer> logActivityCountsMap;
 	private Map<Character, Set<Character>> possibleSiblingMap; // containts co-occurrence counts for seq(a,b) and and(a,b) relations, of which the support is upper-bounded by co-occurrence
-	
-	@UITopiaVariant(affiliation = UITopiaVariant.EHV, author = "N. Tax", email = "n.tax@tue.nl")
-	@PluginVariant(variantLabel = "Search for Local Process Models", requiredParameterLabels = {0})
-	public LPMXLog run(UIPluginContext context, XLog log) {
-		//params = new LocalProcessModelParameters();
-		//params.setDiscoveryLog(log);
-		//params.setEvaluationLog(log);
-		//params.setSmartParameterDefaultsForDiscoveryLog();
-		//LocalProcessModelDialog dialog = new LocalProcessModelDialog(params);
-	    // Show the dialog. User can now change the configuration.
-	    //InteractionResult result = context.showWizard("Configure parameters for Local Process Model Discovery", true, true, dialog);
-	    // User has close the dialog.
-	    //if (result == InteractionResult.FINISHED) 
-	    //	return runHeadless(context, params);
-		return new LPMXLog(log);
-	}
-	
-	@UITopiaVariant(affiliation = UITopiaVariant.EHV, author = "N. Tax", email = "n.tax@tue.nl")
-	@PluginVariant(variantLabel = "Search for Local Process Models", requiredParameterLabels = {0})
-	public LPMXLog run(PluginContext context, XLog log) {
-		//params = new LocalProcessModelParameters();
-		//params.setDiscoveryLog(log);
-		//params.setEvaluationLog(log);
-		//params.setSmartParameterDefaultsForDiscoveryLog();
-		//return runHeadless(context, params); // uses default parameters
-		//LocalProcessModelMiner miner = new LocalProcessModelMiner();
-		return new LPMXLog(log);
-	}
-	
+		
 	public LocalProcessModelRanking runHeadlessProjectionless(PluginContext context, LocalProcessModelParameters params){
 		encodingScheme = getLogEncodingScheme(params.getDiscoveryLog());
 		decodingScheme = getLogDecodingScheme(encodingScheme);

@@ -40,7 +40,7 @@ import org.processmining.processtree.impl.ProcessTreeImpl;
 		returnLabels = {"High-Utility Local Process Model Ranking"}, 
 		returnTypes = { ParameterizedLPMXLog.class }
 		)
-public class HighUtilityLocalProcessModelDiscovery extends LocalProcessModelDiscovery{
+public class HighUtilityLocalProcessModelDiscovery extends LocalProcessModelDiscoveryUI {
 	private AtomicInteger petriNetsExplored;
 
 	private UtilityLocalProcessModelParameters params;

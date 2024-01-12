@@ -20,7 +20,7 @@ public class LocalProcessModelDiscoveryHeadless extends LocalProcessModelDiscove
 
 	@UITopiaVariant(affiliation = UITopiaVariant.EHV, author = "N. Tax", email = "n.tax@tue.nl")
 	@PluginVariant(variantLabel = "Headless search for Local Process Models", requiredParameterLabels = {0})
-	public LocalProcessModelRanking runHeadless(PluginContext context, XLog log) {
+	public LocalProcessModelRanking runWithLog(PluginContext context, XLog log) {
 		LocalProcessModelParameters params = new LocalProcessModelParameters();
 		params.setDiscoveryLog(log);
 		params.setEvaluationLog(log);
@@ -30,7 +30,7 @@ public class LocalProcessModelDiscoveryHeadless extends LocalProcessModelDiscove
 
 	@UITopiaVariant(affiliation = UITopiaVariant.EHV, author = "N. Tax", email = "n.tax@tue.nl")
 	@PluginVariant(variantLabel = "Headless search for Local Process Models with Parameters", requiredParameterLabels = {1})
-	public LocalProcessModelRanking runHeadless(PluginContext context, LocalProcessModelParameters params) {
-		return runHeadless(context, params); // uses default parameters
+	public LocalProcessModelRanking runWithParams(PluginContext context, LocalProcessModelParameters params) {
+		return runHeadless(context, params); // uses provided parameters
 	}
 }
